@@ -1,3 +1,5 @@
+namespace app.restaurant;
+
 entity Order {
     key ID: UUID;
     Customers : Association to Customer;
@@ -8,7 +10,7 @@ entity Order {
 
 entity Pizza {
     key ID : UUID;
-    Toppings : Composition of Topping;
+    Toppings : Composition of many Topping;
     Size : String(50);
     Crust : String(50);
 };
